@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PriceScan – Compare Prices & Specs</title>
+  <meta name="description" content="Compare product prices AND specifications across Amazon, Flipkart, Meesho, eBay and more."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="header">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 10h14M10 3l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">price<span>scan</span></div>
+      </div>
+      <div class="tagline">// prices + best specifications across all platforms</div>
+    </div>
+
+    <div class="search-box">
+      <div class="search-row">
+        <input class="search-input mono" id="queryInput" type="text"
+          placeholder="Search any product... e.g. iPhone 15, Samsung TV, Nike Air Max"/>
+        <button class="search-btn" id="searchBtn" onclick="doSearch()">SCAN ›</button>
+      </div>
+      <div class="filters">
+        <div class="filter-chip active" data-f="all"         onclick="toggleFilter(this)">All Sites</div>
+        <div class="filter-chip"        data-f="in"          onclick="toggleFilter(this)">India</div>
+        <div class="filter-chip"        data-f="global"      onclick="toggleFilter(this)">Global</div>
+        <div class="filter-chip"        data-f="electronics" onclick="toggleFilter(this)">Electronics</div>
+        <div class="filter-chip"        data-f="fashion"     onclick="toggleFilter(this)">Fashion</div>
+      </div>
+    </div>
+
+    <div id="mainArea">
+      <div class="empty">
+        <div class="empty-icon">⌕</div>
+        <div>search a product to compare prices &amp; specifications</div>
+      </div>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
